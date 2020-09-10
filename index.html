@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Flash Beats</title>
+
+    <style>
+        .jumbotron {
+            background-color: red;
+        }
+
+        #search-text {
+            color: rebeccapurple;
+            font-size: x-large;
+            padding-right: 10px;
+        }
+
+        #search-button {
+            background-color: red;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+    <header class="nav-bar">
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <h2>Flash Beats</h2>
+                <h5>Come jam with us!</h5>
+            </div>
+            <div class="top-bar-right">
+                <form>
+                    <div class="menu search-field">
+                        <li>
+                            <label for="search-field" id="search-text">Search by Artist, Song, or Lyrics:</label>
+                        </li>
+                        <li id="search-field-container">
+                            <input type="text" id="search-field" placeholder="Search!">
+                        </li>
+                        <li>
+                            <button class="submit button" id="search-button">Find it!</button>
+                        </li>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
