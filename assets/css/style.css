@@ -14,9 +14,40 @@ main {
 
 .search-panel {
     width: 30%;
+    margin-left: 10px;
 }
 
 .results-panel {
     text-align: center;
     width: 70%;
+}
+
+#search-button {
+    border-radius: 5px;
+}
+
+.nav-bar {
+    border-bottom: 3px solid black;
+    background-color: red
+}
+
+.top-bar-left {
+    background-image: url("/assets/svg/abstractBeats.gif");
+    background-position: 50%;
+    background-size: cover;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+.top-bar-left h2, h5 {
+    display: flex;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.top-bar-left h2 {
+    font-size: 75px;
 }
