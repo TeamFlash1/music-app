@@ -6,6 +6,8 @@ main {
     background-color: red;
 }
 
+/* Search Section */
+
 #search-text {
     color: rebeccapurple;
     font-size: x-large;
@@ -18,9 +20,13 @@ main {
     width: 70%;
 }
 
+/* Recently Searched Section */
+
 .search-panel {
     width: 30%;
 }
+
+/* Results Section */
 
 .results-panel {
     text-align: center;
