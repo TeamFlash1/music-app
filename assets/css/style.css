@@ -12,6 +12,12 @@ main {
     padding-right: 10px;
 }
 
+
+.menu button {
+    margin-top: 5px;
+    width: 70%;
+}
+
 .search-panel {
     width: 30%;
 }
