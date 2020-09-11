@@ -1,0 +1,22 @@
+main {
+    display: flex;
+}
+
+.jumbotron {
+    background-color: red;
+}
+
+#search-text {
+    color: rebeccapurple;
+    font-size: x-large;
+    padding-right: 10px;
+}
+
+.search-panel {
+    width: 30%;
+}
+
+.results-panel {
+    text-align: center;
+    width: 70%;
+}
