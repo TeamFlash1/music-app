@@ -50,6 +50,8 @@ main {
     border-radius: 5px;
 }
 
+
+
 /* recently search and result sections */
 .search-panel, .results-panel {
     margin: 15px;
@@ -68,6 +70,10 @@ main {
 .results-panel {
     text-align: center;
     width: 70%;
+}
+
+.myLyrics{
+    white-space: pre-wrap;
 }
 
 .nav-bar {
