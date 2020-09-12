@@ -4,18 +4,18 @@ $(document).ready(function () {
     };
 
     Object.keys(localStorageItems).map((obj) => {
-        $("#SearchHistory").append(
-            `<li class="SearchHistory" id="${decodeURI(obj)}">${decodeURI(obj)}</li>`
+        $("#searchHistory").append(
+            `<li class="searchHistory" id="${decodeURI(obj)}">${decodeURI(obj)}</li>`
         );
     });
 
-    $(document).on("click", "#SearchTickets", function () {
-        var myArtist = $("#Artist").val();
+    $(document).on("click", "#searchTickets", function () {
+        var myArtist = $("#artist").val();
         $.get(
             `https://app.ticketmaster.com/discovery/v2/events.json?size=1&keyword=${myArtist}&apikey=XODtjbJtOVAMy9okrsnHBIBmrRGV1Upk`,
             function (mydata) {
                 console.log("mydata", mydata._embedded.events);
-                $("#MyCalendar").append(
+                $("#myCalendar").append(
                     mydata._embedded.events.map((event) => {
                         return `<div class="events"><img class="eventImage" src="${event.images[0].url}"/><p class="eventName">${event.name}</p></div>`;
                     })
@@ -24,9 +24,9 @@ $(document).ready(function () {
         );
     });
 
-    $("#Search").click(function () {
-        var artist = encodeURI($("#Artist").val());
-        var song = encodeURI($("#Song").val());
+    $("#search").click(function () {
+        var artist = encodeURI($("#artist").val());
+        var song = encodeURI($("#song").val());
 
         $.get(
             `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
@@ -34,16 +34,16 @@ $(document).ready(function () {
                 var subString = data.replace("callback(", "");
                 var jsonString = subString.replace(");", "");
                 var lyrics = JSON.parse(jsonString);
-                $("#MyLyrics").text(lyrics.message.body.lyrics.lyrics_body);
+                $("#myLyrics").text(lyrics.message.body.lyrics.lyrics_body);
                 localStorage.setItem(
                     `${artist}: ${song}`,
                     lyrics.message.body.lyrics.lyrics_body
                 );
-                $("#MyLink").html(
+                $("#myLink").html(
                     `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
                 );
-                $("#MyEvents").html(
-                    '<button id="SearchTickets" type="text">Find tickets</button>'
+                $("#myEvents").html(
+                    '<button class="searchTickets" id="searchTickets" type="text">🔍 Find Tickets 🔍</button>'
                 );
             }
         );
