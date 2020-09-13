@@ -8,7 +8,7 @@ main {
 
 /* page title section */
 .top-bar-left {
-    background-image: url("assets/svg/abstractBeats.gif");
+    background-image: url("../svg/abstractBeats.gif");
     background-position: 50%;
     background-size: cover;
     border: 5px solid white;
