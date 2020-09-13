@@ -13,6 +13,11 @@ $(document).ready(function () {
     $.get(
       `https://app.ticketmaster.com/discovery/v2/events.json?size=1&keyword=${myArtist}&apikey=XODtjbJtOVAMy9okrsnHBIBmrRGV1Upk`,
       function (mydata) {
+        if (!mydata) {
+          $("#MyCalendar").append(
+            "<p>No tickets or events found for that artist</p>"
+          );
+        }
         console.log("mydata", mydata._embedded.events);
         $("#MyCalendar").append(
           mydata._embedded.events.map((event) => {
@@ -46,6 +51,7 @@ $(document).ready(function () {
   $("#Search").click(function () {
     var artist = encodeURI($("#Artist").val());
     var song = encodeURI($("#Song").val());
+    $(".events").remove();
 
     $.get(
       `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
@@ -74,6 +80,7 @@ $(document).ready(function () {
     if (e.which == 13) {
       var artist = encodeURI($("#Artist").val());
       var song = encodeURI($("#Song").val());
+      $(".events").remove();
 
       $.get(
         `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
