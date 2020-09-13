@@ -51,7 +51,6 @@ main {
 }
 
 
-
 /* recently search and result sections */
 .search-panel, .results-panel {
     margin: 15px;
@@ -85,7 +84,7 @@ main {
 }
 
 #songName, #artistName {
-text-transform: capitalize;
+text-transform: uppercase;
 }
 
 /* Button Styles */
@@ -115,6 +114,9 @@ text-transform: capitalize;
     background-color: salmon;
 }
 
+.myEvents button:focus {
+    background-color: salmon;
+}
 
 /* myEvents section */
 .myEvents {

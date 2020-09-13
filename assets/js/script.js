@@ -29,7 +29,7 @@ $(document).ready(function () {
         var song = encodeURI($("#song").val());
         document.getElementById("artistName").innerHTML = artist.toString()
         document.getElementById("songName").innerHTML = song.toString();
-
+        
 
         $.get(
             `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
@@ -43,9 +43,9 @@ $(document).ready(function () {
                     lyrics.message.body.lyrics.lyrics_body
                 );
                  $("#myLink").html(
-                    `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</button>`
-                );
-               /* $("#myLink").html(
+                    `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
+                ); 
+                /*$("#myLink").html(
                     `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
                 );*/
                 $("#myEvents").html(
