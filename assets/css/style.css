@@ -101,11 +101,11 @@ main {
 }
 
 .searchTickets {
-    width: 15%;
+    width: 20%;
 }
 
 .myLink {
-    width: 15%;
+    width: 20%;
 }
 
 .myLink button:hover, .search-field button:hover, .myEvents button:hover {

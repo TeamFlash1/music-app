@@ -40,7 +40,7 @@ $(document).ready(function () {
                     lyrics.message.body.lyrics.lyrics_body
                 );
                  $("#myLink").html(
-                    `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</button>`
+                    `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</button>`
                 );
                /* $("#myLink").html(
                     `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
