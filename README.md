@@ -1,11 +1,11 @@
-<center><h1>Flash Beats</h1></center>
+#Flash Beats
 
 A site where you can search for music by artist and song title. The search result will let you play the song and see the lyrics.
 
 > Screenshot of app
 
 <br>
-<h2>Find your beat!</h2>
+##Find your beat!
 [GitHub Page](https://teamflash1.github.io/music-app)
 <br>
 <br>
