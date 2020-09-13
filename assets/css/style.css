@@ -87,7 +87,7 @@ main {
 }
 
 /* Button Styles */
-.searchBtn, .searchTickets {
+.searchBtn, .searchTickets, .myLink {
     margin-top: 5px;
     border-radius: 10px;
     padding: 10px;
@@ -104,13 +104,17 @@ main {
     width: 15%;
 }
 
-.search-field button:hover, .myEvents button:hover {
+.myLink {
+    width: 15%;
+}
+
+.myLink button:hover, .search-field button:hover, .myEvents button:hover {
     background-color: salmon;
 }
 
 /* myEvents section */
 .myEvents {
     display: flex;
-    justify-content: center;
-    margin: 10px;
+    justify-content: left;
+    /*margin: 10px;*/
 }

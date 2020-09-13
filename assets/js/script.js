@@ -39,9 +39,12 @@ $(document).ready(function () {
                     `${artist}: ${song}`,
                     lyrics.message.body.lyrics.lyrics_body
                 );
-                $("#myLink").html(
-                    `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
+                 $("#myLink").html(
+                    `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</button>`
                 );
+               /* $("#myLink").html(
+                    `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
+                );*/
                 $("#myEvents").html(
                     '<button class="searchTickets" id="searchTickets" type="text">🔍 Find Tickets 🔍</button>'
                 );
