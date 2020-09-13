@@ -5,8 +5,8 @@ A site where you can search for music by artist and song title. The search resul
 > Screenshot of app
 
 <br>
-<a href="https://teamflash1.github.io/music-app"><h2>Find your beat!</h2></a>
-<i>(click to view the site)</i>
+<h2>Find your beat!</h2>
+[GitHub Page](https://teamflash1.github.io/music-app)
 <br>
 <br>
 [How this was created?](https://github.com/TeamFlash1/music-app)
