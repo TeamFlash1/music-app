@@ -65,6 +65,7 @@ main {
 
 .search-panel {
     width: 30%;
+
 }
 
 .results-panel {
@@ -75,15 +76,16 @@ main {
 .myLyrics{
     white-space: pre-wrap;
     text-align: left;
+    margin: 10px;
+    padding: 5px;
 }
 
 .nav-bar {
     border-bottom: 3px solid black;
 }
 
-.myLyrics {
-    margin: 10px;
-    padding: 5px;
+#songName, #artistName {
+text-transform: capitalize;
 }
 
 /* Button Styles */
@@ -106,15 +108,17 @@ main {
 
 .myLink {
     width: 20%;
+    margin-left: 10px;
 }
 
-.myLink button:hover, .search-field button:hover, .myEvents button:hover {
+.search-field button:hover, .myEvents button:hover, #myLink button:hover {
     background-color: salmon;
 }
+
 
 /* myEvents section */
 .myEvents {
     display: flex;
     justify-content: left;
-    /*margin: 10px;*/
+    margin: 10px;
 }

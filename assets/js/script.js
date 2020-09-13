@@ -27,6 +27,9 @@ $(document).ready(function () {
     $("#search").click(function () {
         var artist = encodeURI($("#artist").val());
         var song = encodeURI($("#song").val());
+        document.getElementById("artistName").innerHTML = artist.toString()
+        document.getElementById("songName").innerHTML = song.toString();
+
 
         $.get(
             `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
