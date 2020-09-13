@@ -74,6 +74,7 @@ main {
 
 .myLyrics{
     white-space: pre-wrap;
+    text-align: left;
 }
 
 .nav-bar {
