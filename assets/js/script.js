@@ -1,12 +1,18 @@
-$(document).ready(function () {
-  const localStorageItems = { ...localStorage };
+function writeToHistory() {
+  const localStorageItems = {
+    ...localStorage
+  };
+
+  $("#searchHistory").empty();
 
   Object.keys(localStorageItems).map((obj) => {
     $("#searchHistory").append(
       `<li class="savedEntries" id="${decodeURI(obj)}">${decodeURI(obj)}</li>`
     );
   });
+}
 
+$(document).ready(function () {
   $(document).on("click", "#searchTickets", function () {
     $(".events").remove();
     var myArtist = $("#artist").val();
@@ -53,6 +59,7 @@ $(document).ready(function () {
     var song = encodeURI($("#song").val());
     $(".events").remove();
 
+
     $.get(
       `https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=callback&q_track=${song}&q_artist=${artist}&apikey=8e5d38bc326c0567033e2db2442c6afb`,
       function (data) {
@@ -61,11 +68,10 @@ $(document).ready(function () {
         var lyrics = JSON.parse(jsonString);
         $("#myLyrics").text(lyrics.message.body.lyrics.lyrics_body);
         localStorage.setItem(
-         // decodeURI(
-            `${artist}: ${song}`,
-            lyrics.message.body.lyrics.lyrics_body
-         // )
+          `${artist}: ${song}`,
+          lyrics.message.body.lyrics.lyrics_body
         );
+        writeToHistory();
         $("#myLink").html(
           `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a>`
         );
@@ -74,6 +80,8 @@ $(document).ready(function () {
         );
       }
     );
+    $("#artist")[0].value = "";
+    $("#song")[0].value = "";
   });
 
   $(document).on("keypress", function (e) {
@@ -93,6 +101,7 @@ $(document).ready(function () {
             `${artist}: ${song}`,
             lyrics.message.body.lyrics.lyrics_body
           );
+          writeToHistory();
           $("#myLink").html(
             `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">Listen</a>`
           );
@@ -101,6 +110,10 @@ $(document).ready(function () {
           );
         }
       );
+      $("#artist")[0].value = "";
+      $("#song")[0].value = "";
     }
   });
 });
+
+writeToHistory();
