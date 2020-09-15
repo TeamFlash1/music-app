@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+/* page title section */
+.top-bar-left {
+    background-image: url("../svg/abstractBeats.gif");
+    background-position: 50%;
+    background-size: cover;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+.top-bar-left h2, h5 {
+    display: flex;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.top-bar-left h2 {
+    font-size: 75px;
+}
+
+/* hover animate subtitle in page section title */
+/* Mario will work on this in the second week of the project*/
+
+/* user search section */
+
+#search-text {
+    color: rebeccapurple;
+    font-size: x-large;
+    padding-right: 10px;
+}
+
+.search-field {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+}
+
+.artist, .song {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+/* recently search and result sections */
+.search-panel, .results-panel {
+    margin: 15px;
+}
+
+.searchTitle {
+    margin: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.search-panel {
+    width: 30%;
+
+}
+
+.results-panel {
+    text-align: center;
+    width: 70%;
+}
+
+.myLyrics{
+    white-space: pre-wrap;
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+.nav-bar {
+    border-bottom: 3px solid black;
+}
+
+#songName, #artistName {
+text-transform: uppercase;
+}
+
+/* Button Styles */
+.searchBtn, .searchTickets, .myLink {
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: cadetblue;
+    font-weight: bold;
+    color: white;
+}
+
+.searchBtn {
+    width: 45%;
+}
+
+.searchTickets {
+    width: 20%;
+}
+
+.myLink {
+    width: 20%;
+    margin-left: 10px;
+}
+
+.search-field button:hover, .myEvents button:hover, #myLink button:hover {
+    background-color: salmon;
+}
+
+.myEvents button:focus {
+    background-color: salmon;
+}
+
+/* myEvents section */
+.myEvents {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
