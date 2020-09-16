@@ -1,0 +1,18 @@
+.events {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.eventImage {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.eventName {
+  font-size: 22px;
+}
+.savedEntries {
+  cursor: pointer;
+}
