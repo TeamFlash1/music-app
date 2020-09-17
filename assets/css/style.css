@@ -123,11 +123,27 @@ h5 {
 .search-panel {
   width: 30%;
   border-right: 1px solid cadetblue;
+  background-color: rgb(255, 228, 196, 0.4);
+}
+
+.search-panel h3 {
+  background-color: bisque;
+  padding-left: 10px;
+  border: 2px double bisque;
+}
+
+.recently-searched-box {
+  padding-left: 10px;
 }
 
 .results-panel {
+  background-color: rgb(255, 51, 204, 0.2);
   text-align: center;
   width: 70%;
+}
+
+.results-panel h3 {
+  background-color: rgb(255, 51, 204, 0.2);
 }
 
 .myLyrics {
