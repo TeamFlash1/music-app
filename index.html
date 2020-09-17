@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compressed CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Compressed CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <title>Flash Beats</title>
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Flash Beats</title>
+  </head>
 
-<body>
-  <header class="nav-bar">
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <h2>
-          <span>F</span>
-          <span>l</span>
-          <span>a</span>
-          <span>s</span>
-          <span>h</span>
-          <span>B</span>
-          <span>e</span>
-          <span>a</span>
-          <span>t</span>
-          <span>s</span>
-        </h2>
-        <h5>Come jam with us!</h5>
-      </div>
-      <div class="top-bar-right">
-        <div class="pure-form menu search-field">
-          <input type="text" class="artist" id="artist" placeholder="type artist name" />
-          <input type="text" class="song" id="song" placeholder="type song name" />
-          <button class="searchBtn" id="search">🎵 Search 🎵</button>
+  <body>
+    <header class="nav-bar">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <h2>
+            <span>F</span>
+            <span>l</span>
+            <span>a</span>
+            <span>s</span>
+            <span>h</span>
+            <span>B</span>
+            <span>e</span>
+            <span>a</span>
+            <span>t</span>
+            <span>s</span>
+          </h2>
+          <h5>Come jam with us!</h5>
+        </div>
+        <div class="top-bar-right">
+          <div class="pure-form menu search-field">
+            <input
+              type="text"
+              class="artist"
+              id="artist"
+              placeholder="type artist name"
+            />
+            <input
+              type="text"
+              class="song"
+              id="song"
+              placeholder="type song name"
+            />
+            <button class="searchBtn" id="search">🎵 Search 🎵</button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="search-panel">
-      <h3>Recently Searched</h3>
-      <div class="recently-searched-box">
-        <p class="searchTitle">Artist: Song Name</p>
-        <ul id="searchHistory"></ul>
-      </div>
-    </section>
+    <main>
+      <section class="search-panel">
+        <h3>Recently Searched</h3>
+        <div class="recently-searched-box">
+          <p class="searchTitle">Artist: Song Name</p>
+          <ul id="searchHistory"></ul>
+        </div>
+      </section>
 
-    <section class="results-panel">
-      <h3>Results</h3>
-      <div class="results-box">
-        <ul id="search-results"></ul>
-        <h4><span id="artistName"></span> <span id="songName"></span></h4>
-        <div class="wrapper">
-          <div id="myLink"></div>
+      <section class="results-panel">
+        <h3>Results</h3>
+        <div class="results-box">
+          <ul id="search-results"></ul>
+          <h4><span id="artistName"></span> <span id="songName"></span></h4>
+          <div class="" id="myLink"></div>
           <div class="myLyrics" id="myLyrics"></div>
           <div class="myEvents" id="myEvents"></div>
           <div id="myCalendar"></div>
         </div>
+      </section>
+    </main>
+
+    <footer>
+      <h2><span>Made by the Developer Jockeys:</span> James, Ida, Owais and Mario.</h2>
+      <div>
+        <a href="https://media.giphy.com/avatars/404academy/kGwR3uDrUKPI.gif">Read Our Privacy Policy</a><br />
+        <span>&copy; 2020 Flash Beats</span>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-  <script src="assets/js/script.js"></script>
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
