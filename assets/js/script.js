@@ -15,11 +15,7 @@ function writeToHistory() {
 $(document).ready(function () {
   const localStorageItems = { ...localStorage };
 
-  Object.keys(localStorageItems).map((obj) => {
-    $("#searchHistory").append(
-      `<li class="savedEntries" id="${decodeURI(obj)}">${decodeURI(obj)}</li>`
-    );
-  });
+  writeToHistory();
 
   $(document).on("click", "#searchTickets", function () {
     $(".events").remove();
@@ -82,6 +78,7 @@ $(document).ready(function () {
           `${decodeURI(artist)}: ${decodeURI(song)}`,
           decodeURI(lyrics.message.body.lyrics.lyrics_body)
         );
+        writeToHistory();
         $("#myLink").html(
           `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
         );
@@ -112,6 +109,7 @@ $(document).ready(function () {
             `${artist}: ${song}`,
             decodeURI(lyrics.message.body.lyrics.lyrics_body)
           );
+          writeToHistory();
           $("#myLink").html(
             `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
           );
