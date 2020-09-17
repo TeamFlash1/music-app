@@ -210,6 +210,10 @@ h5 {
   width: 25%;
 }
 
+.myLink {
+  width: 25%;
+}
+
 #myLink, #myLyrics, #myEvents, #myCalendar {
   display: flex;
   justify-content: center;
