@@ -119,6 +119,7 @@ h5 {
   margin-left: 10px;
 }
 
+/*added Button Hover */
 button:hover, a.selected {
   background-color: salmon;
 } 
