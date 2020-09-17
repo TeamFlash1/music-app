@@ -1,126 +1,305 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #717074;
 }
 
 main {
-    display: flex;
+  display: flex;
 }
 
 /* page title section */
 .top-bar-left {
-    background-image: url("../svg/abstractBeats.gif");
-    background-position: 50%;
-    background-size: cover;
-    border: 5px solid white;
-    border-radius: 5px;
+  background-image: url("../svg/abstractBeats.gif");
+  background-position: 50%;
+  background-size: cover;
+  border: 5px solid white;
+  border-radius: 5px;
 }
 
-.top-bar-left h2, h5 {
-    display: flex;
-    justify-content: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: white;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgb(255, 255, 255);
+.top-bar-left h2,
+h5 {
+  display: flex;
+  justify-content: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .top-bar-left h2 {
-    font-size: 75px;
+  font-size: 75px;
 }
 
-/* hover animate subtitle in page section title */
-/* Mario will work on this in the second week of the project*/
+/* title animation */
+.top-bar-left h2 span {
+  animation: animate 1.5s linear infinite;
+}
+
+.top-bar-left h2 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.top-bar-left h2 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.top-bar-left h2 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.top-bar-left h2 span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.top-bar-left h2 span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.top-bar-left h2 span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.top-bar-left h2 span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.top-bar-left h2 span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.top-bar-left h2 span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.top-bar-left h2 span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-30px);
+  }
+  15% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  45% {
+    transform: translateY(0px);
+  }
+}
 
 /* user search section */
-
 #search-text {
-    color: rebeccapurple;
-    font-size: x-large;
-    padding-right: 10px;
+  color: rebeccapurple;
+  font-size: x-large;
+  padding-right: 10px;
 }
 
 .search-field {
-    display: flex;
-    justify-content: center;
-    padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0 5px 0;
 }
 
-.artist, .song {
-    border: 1px solid gray;
-    border-radius: 5px;
+.artist,
+.song {
+  border: 1px solid gray;
+  border-radius: 5px;
 }
-
 
 /* recently search and result sections */
-.search-panel, .results-panel {
-    margin: 15px;
+.search-panel,
+.results-panel {
+  margin: 15px;
 }
 
 .searchTitle {
-    margin: 10px;
-    font-weight: bold;
-    text-decoration: underline;
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .search-panel {
-    width: 30%;
+  width: 30%;
+  border-right: 1px solid #2b8693;
+  background-color: rgb(255, 51, 51, 0.5);
+}
 
+.search-panel h3 {
+  background-color: rgb(255, 51, 51, 0.5);
+  padding-left: 10px;
+}
+
+.recently-searched-box {
+  padding-left: 10px;
 }
 
 .results-panel {
-    text-align: center;
-    width: 70%;
+  background-color: rgb(77, 184, 255, 0.4);
+  text-align: center;
+  width: 70%;
 }
 
-.myLyrics{
-    white-space: pre-wrap;
-    text-align: left;
-    margin: 10px;
-    padding: 5px;
+.results-panel h3 {
+  background-color: rgb(77, 184, 255, 0.6);
+}
+
+.results-box h4 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  /* background-color: red; */
+  margin: 0 auto;
+  width: 50%;
+}
+
+.myLyrics {
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre-wrap;
+  margin: 20px 10px;
+  padding: 5px;
+  white-space: pre-wrap ;
 }
 
 .nav-bar {
-    border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
-#songName, #artistName {
-text-transform: uppercase;
+#songName,
+#artistName {
+  text-transform: uppercase;
 }
 
 /* Button Styles */
-.searchBtn, .searchTickets, .myLink {
-    margin-top: 5px;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: cadetblue;
-    font-weight: bold;
-    color: white;
+/* From Jim: I swapped out the cadet blue for a hex value I was able to obtain from the flashbeats image */
+.searchBtn,
+.ticketButton,
+.myLink {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #2b8693;
+  font-weight: bold;
+  color: white;
+}
+
+.myLink a {
+  color: white;
 }
 
 .searchBtn {
-    width: 45%;
+  width: 45%;
 }
 
-.searchTickets {
-    width: 20%;
+#searchTickets {
+  width: 25%;
 }
 
 .myLink {
-    width: 20%;
-    margin-left: 10px;
+  width: 25%;
 }
 
-.search-field button:hover, .myEvents button:hover, #myLink button:hover {
-    background-color: salmon;
+#myLink, #myLyrics, #myEvents, #myCalendar {
+  display: flex;
+  justify-content: center;
 }
 
-.myEvents button:focus {
-    background-color: salmon;
+/*added Button Hover */
+a:hover,
+.myLink:hover,
+button:hover,
+a.selected {
+  background-color: salmon;
 }
 
 /* myEvents section */
 .myEvents {
-    display: flex;
-    justify-content: left;
-    margin: 10px;
+  display: flex;
+  justify-content: left;
+  margin: 10px;
+}
+
+.events {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.eventImage {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.eventName {
+  font-size: 22px;
+}
+
+.innerLink {
+  background: transparent;
+  border: none;
+}
+
+.savedEntries {
+  cursor: pointer;
+}
+
+/* footer style */
+footer {
+  background: lightgray;
+  width: 100%;
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer h2 {
+  color: cadetblue;
+  font-size: 20px;
+  margin: 0;
+}
+
+footer h2 span {
+  font-weight: bold;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+
+footer div span {
+  color: cadetblue;
+}
+
+footer h2, footer div {
+    text-align: center;
+    width: 100%;
+}
+
+.savedEntries:hover {
+  background: #2b8693;
+  color: white;
+  font-weight: bold;
+}
+
+#searchHistory {
+  list-style: none;
+  margin-left: 0;
 }
