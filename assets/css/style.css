@@ -205,3 +205,38 @@ button:hover, a.selected {
 .savedEntries {
   cursor: pointer;
 }
+
+/* footer style */
+footer {
+  background: lightgray;
+  width: 100%;
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer h2 {
+  color: cadetblue;
+  font-size: 20px;
+  margin: 0;
+}
+
+footer h2 span {
+  font-weight: bold;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+
+footer div span {
+  color: cadetblue;
+}
+
+footer h2,
+  footer div {
+    text-align: center;
+    width: 100%;
+  }
