@@ -1,6 +1,8 @@
+// maybe consider changing this as it is reading local storage, not writing it
+
 function writeToHistory() {
   const localStorageItems = {
-    ...localStorage
+    ...localStorage,
   };
 
   $("#searchHistory").empty();
@@ -58,7 +60,7 @@ $(document).ready(function () {
     $("#song").val(song);
     $("#myLyrics").text(data);
     $("#myLink").html(
-      `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
+      `<a class="innerLink" href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a>`
     );
     $("#myEvents").html(
       '<button class="ticketButton" id="searchTickets" type="text">🔍 Find tickets 🔍</button>'
@@ -90,6 +92,7 @@ $(document).ready(function () {
         );
         $("#artist").val("");
         $("#song").val("");
+        writeToHistory();
       }
     );
   });
@@ -109,7 +112,7 @@ $(document).ready(function () {
           var lyrics = JSON.parse(jsonString);
           $("#myLyrics").text(lyrics.message.body.lyrics.lyrics_body);
           localStorage.setItem(
-            `${artist}: ${song}`,
+            `${decodeURI(artist)}: ${decodeURI(song)}`,
             decodeURI(lyrics.message.body.lyrics.lyrics_body)
           );
           $("#myLink").html(
@@ -120,10 +123,9 @@ $(document).ready(function () {
           );
           $("#artist").val("");
           $("#song").val("");
+          writeToHistory();
         }
       );
     }
   });
 });
-
-writeToHistory();
