@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #717074;
 }
 
 main {
@@ -30,63 +31,63 @@ h5 {
 }
 
 /* title animation */
-.top-bar-left h2 span{
-    animation: animate 1.5s linear infinite;
+.top-bar-left h2 span {
+  animation: animate 1.5s linear infinite;
 }
 
 .top-bar-left h2 span:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 .top-bar-left h2 span:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .top-bar-left h2 span:nth-child(3) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .top-bar-left h2 span:nth-child(4) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .top-bar-left h2 span:nth-child(5) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .top-bar-left h2 span:nth-child(6) {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 .top-bar-left h2 span:nth-child(7) {
-    animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 .top-bar-left h2 span:nth-child(8) {
-    animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 .top-bar-left h2 span:nth-child(9) {
-    animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 .top-bar-left h2 span:nth-child(10) {
-    animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 
 @keyframes animate {
-    0% {
-        transform: translateY(0px);
-    }
-    10% {
-        transform: translateY(-30px);
-    }
-    15% {
-        transform: translateY(0px);
-    }
-    25% {
-        transform: translateY(-20px);
-    }
-    30% {
-        transform: translateY(0px);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    45% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-30px);
+  }
+  15% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  45% {
+    transform: translateY(0px);
+  }
 }
 
 /* user search section */
@@ -122,7 +123,7 @@ h5 {
 
 .search-panel {
   width: 30%;
-  border-right: 1px solid cadetblue;
+  border-right: 1px solid #2b8693;
 }
 
 .results-panel {
@@ -131,10 +132,11 @@ h5 {
 }
 
 .myLyrics {
-  white-space: pre-wrap;
+  line-height: 1.6;
   text-align: left;
-  margin: 10px;
+  margin: 20px 10px;
   padding: 5px;
+  white-space: pre-wrap ;
 }
 
 .nav-bar {
@@ -147,13 +149,14 @@ h5 {
 }
 
 /* Button Styles */
+/* From Jim: I swapped out the cadet blue for a hex value I was able to obtain from the flashbeats image */
 .searchBtn,
 .ticketButton,
 .myLink {
   margin-top: 5px;
   border-radius: 10px;
   padding: 10px;
-  background-color: cadetblue;
+  background-color: #2b8693;
   font-weight: bold;
   color: white;
 }
@@ -176,9 +179,12 @@ h5 {
 }
 
 /*added Button Hover */
-button:hover, a.selected {
+a:hover,
+.myLink:hover,
+button:hover,
+a.selected {
   background-color: salmon;
-} 
+}
 
 /* myEvents section */
 .myEvents {
@@ -202,6 +208,12 @@ button:hover, a.selected {
 .eventName {
   font-size: 22px;
 }
+
+.innerLink {
+  background: transparent;
+  border: none;
+}
+
 .savedEntries {
   cursor: pointer;
 }
@@ -235,8 +247,18 @@ footer div span {
   color: cadetblue;
 }
 
-footer h2,
-  footer div {
+footer h2, footer div {
     text-align: center;
     width: 100%;
-  }
+}
+
+.savedEntries:hover {
+  background: #2b8693;
+  color: white;
+  font-weight: bold;
+}
+
+#searchHistory {
+  list-style: none;
+  margin-left: 0;
+}
