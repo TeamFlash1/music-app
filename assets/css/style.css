@@ -122,14 +122,12 @@ h5 {
 
 .search-panel {
   width: 30%;
-  border-right: 1px solid cadetblue;
-  background-color: rgb(255, 228, 196, 0.4);
+  background-color: rgb(255, 51, 51, 0.5);
 }
 
 .search-panel h3 {
-  background-color: bisque;
+  background-color: rgb(255, 51, 51, 0.5);
   padding-left: 10px;
-  border: 2px double bisque;
 }
 
 .recently-searched-box {
@@ -137,13 +135,13 @@ h5 {
 }
 
 .results-panel {
-  background-color: rgb(255, 51, 204, 0.2);
+  background-color: rgb(77, 184, 255, 0.4);
   text-align: center;
   width: 70%;
 }
 
 .results-panel h3 {
-  background-color: rgb(255, 51, 204, 0.2);
+  background-color: rgb(77, 184, 255, 0.6);
 }
 
 .myLyrics {
