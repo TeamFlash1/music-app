@@ -60,7 +60,7 @@ $(document).ready(function () {
     $("#song").val(song);
     $("#myLyrics").text(data);
     $("#myLink").html(
-      `<a class="innerLink" href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a>`
+      `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
     );
     $("#myEvents").html(
       '<button class="ticketButton" id="searchTickets" type="text">🔍 Find tickets 🔍</button>'
