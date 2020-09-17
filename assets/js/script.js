@@ -58,17 +58,10 @@ $(document).ready(function () {
     $("#song").val(song);
     $("#myLyrics").text(data);
     $("#myLink").html(
-<<<<<<< HEAD
-      `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a>`
-    );
-    $("#myEvents").html(
-      '<button id="searchTickets" type="text">Find tickets</button>'
-=======
       `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
     );
     $("#myEvents").html(
       '<button class="ticketButton" id="searchTickets" type="text">🔍 Find tickets 🔍</button>'
->>>>>>> baa462539c92fba1de2cab7839241f4025a8d01b
     );
   });
 
@@ -120,17 +113,10 @@ $(document).ready(function () {
             decodeURI(lyrics.message.body.lyrics.lyrics_body)
           );
           $("#myLink").html(
-<<<<<<< HEAD
-            `<a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a>`
-          );
-          $("#myEvents").html(
-            '<button id="SearchTickets" type="text">Find tickets</button>'
-=======
             `<button class="myLink" id="myLink" type="text"><a href="https://www.youtube.com/results?search_query=${artist}+${song}" target="_blank">🎧 Listen 🎧</a></button>`
           );
           $("#myEvents").html(
             '<button class="ticketButton" id="searchTickets" type="text">🔍 Find tickets 🔍</button>'
->>>>>>> baa462539c92fba1de2cab7839241f4025a8d01b
           );
           $("#artist").val("");
           $("#song").val("");
