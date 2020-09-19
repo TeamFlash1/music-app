@@ -43,9 +43,12 @@ $(document).ready(function () {
 
   $(document).on("click", ".savedEntries", function () {
     var searchTerm = decodeURI($(this).text());
+    var revisedLocalStorage = {
+      ...localStorage,
+    };
     $(".noTickets").text("");
     $(".events").remove();
-    var myObject = Object.keys(localStorageItems).find(
+    var myObject = Object.keys(revisedLocalStorage).find(
       (obj) => obj === searchTerm
     );
     var data = localStorage.getItem(myObject);
