@@ -16,4 +16,4 @@ As music lovers, we wanted a clean and accurate way to search for our favorite s
 
 [GitHub Repo](https://github.com/TeamFlash1/music-app)
 
-[Presentation](https://github.com/TeamFlash1/music-app/blob/develop/assets/files/Team-Flash-Project-Presentation.ppt)
+[Presentation](https://github.com/TeamFlash1/music-app/blob/develop/assets/files/Team-Flash-Project-Presentation.pdf)
